@@ -6,7 +6,7 @@ export const postSignup = async (email: string, password: string) => {
     username: email,
     password: password,
   });
-  if (data.message === "Admin created successfully") {
+  if (data.message === "User created successfully") {
     console.log("signup success");
     SuccessNotification(data.message);
     localStorage.setItem("token", data.token);
