@@ -2,7 +2,7 @@ import axiosClient from "../api/axiosClient";
 import { SuccessNotification } from "../utils/notification";
 
 export const postSignup = async (email: string, password: string) => {
-  const { data } = await axiosClient.post("user/signup", {
+  const { data } = await axiosClient.post("users/signup", {
     username: email,
     password: password,
   });
@@ -18,7 +18,7 @@ export const postSignup = async (email: string, password: string) => {
 
 export const postLogin = async (email: string, password: string) => {
   const { data } = await axiosClient.post(
-    "user/login",
+    "users/login",
     {},
     {
       headers: {
@@ -38,7 +38,7 @@ export const postLogin = async (email: string, password: string) => {
 };
 
 export const getUsername = async () => {
-  const response = await axiosClient.get("user/username");
+  const response = await axiosClient.get("users/username");
   if (response.status === 200) {
     return response.data.username as string;
   }
