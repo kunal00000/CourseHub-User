@@ -5,7 +5,6 @@ import { postSignup } from "../../services/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { ErrorNotification } from "../../utils/notification";
 
-// File is incomplete. You need to add input boxes to take input for users to register.
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +20,7 @@ function Register() {
   async function onSignup() {
     try {
       const signupResponse = await postSignup(email, password);
-      if (signupResponse.message === "Admin created successfully") {
+      if (signupResponse.message === "User created successfully") {
         navigate("/dashboard");
       }
     } catch (err: any) {

@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import Register from "./components/utilComponents/Register";
 import Dashboard from "./components/overview/Dashboard";
 import CourseDashboard from "./components/course/CourseDashboard";
+import BoughtDashboard from "./components/course/BoughtCourses";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/courses" element={<CourseDashboard />} />
+        <Route path="/dashboard/purchased" element={<BoughtDashboard />} />
         <Route path="*" element={<h1>404 Not Found</h1>}></Route>
       </Routes>
     </Router>

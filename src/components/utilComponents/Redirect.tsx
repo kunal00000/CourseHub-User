@@ -1,5 +1,8 @@
 import { UnstyledButton, Group, ThemeIcon, Text } from "@mantine/core";
-import { IconBrandGoogleAnalytics, IconCertificate } from "@tabler/icons-react";
+import {
+  IconBrandGoogleAnalytics,
+  IconBuildingStore,
+} from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -52,9 +55,9 @@ export function MainLinks() {
       </Link>
       <Link to={"/dashboard/courses"}>
         <Redirect
-          icon={<IconCertificate />}
+          icon={<IconBuildingStore />}
           color={"yellow"}
-          label={"Courses"}
+          label={"All Courses"}
         />
       </Link>
     </div>

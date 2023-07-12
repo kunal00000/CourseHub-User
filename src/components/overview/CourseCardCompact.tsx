@@ -1,7 +1,9 @@
 import { Badge, Group, Notification } from "@mantine/core";
 import { Course } from "../../types/course";
+import { usePurchasedCourses } from "../../hooks/useCourse";
 
 const CourseCardCompact = ({ course }: { course: Course }) => {
+  const { data: purchasedData } = usePurchasedCourses();
   const colors = [
     "blue",
     "cyan",
@@ -18,6 +20,7 @@ const CourseCardCompact = ({ course }: { course: Course }) => {
     "lime",
     "dark",
   ];
+
   return (
     <Notification
       title={course.title}
@@ -26,6 +29,16 @@ const CourseCardCompact = ({ course }: { course: Course }) => {
       withCloseButton={false}
     >
       <Group>
+        {purchasedData.purchasedCourses.length > 0 &&
+        purchasedData.purchasedCourses.find(
+          (purCourse: { _id: string }) => purCourse._id == course._id
+        ) ? (
+          <Badge color="green" radius={"xs"} variant="dot">
+            Purchased
+          </Badge>
+        ) : (
+          ""
+        )}
         <Badge color="yellow">{course.price}$</Badge>
       </Group>
     </Notification>
