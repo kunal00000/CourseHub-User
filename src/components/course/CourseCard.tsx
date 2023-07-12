@@ -9,7 +9,7 @@ import {
 export default function CourseCard({ course }: { course: Course }) {
   const { mutate } = useCoursePostMutation();
   const { data: purchasedData, isLoading } = usePurchasedCourses();
-
+  console.log(purchasedData);
   function onBuyCourse() {
     console.log("Buy course");
     mutate(course._id);
@@ -48,8 +48,7 @@ export default function CourseCard({ course }: { course: Course }) {
       <Text size={"xs"} color="dimmed" mt={"md"}>
         {course.updatedAt}
       </Text>
-      {purchasedData.purchasedCourses.length > 0 &&
-      !purchasedData.purchasedCourses.find(
+      {!purchasedData.purchasedCourses.find(
         (purCourse: { _id: string }) => purCourse._id == course._id
       ) ? (
         <Button
