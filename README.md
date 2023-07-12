@@ -16,7 +16,7 @@ __User Interface for CourseHub - [CourseHub-User](https://github.com/kunal00000/
 1. Fork this repository.
 2. Clone using
    ```
-   $ git clone https://github.com/kunal00000/CourseHub-Admin.git
+   $ git clone https://github.com/kunal00000/CourseHub-User.git
    ```
 3. Install dependencies
    ```
