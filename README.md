@@ -1,9 +1,9 @@
 # CourseHub-User
 CourseHub-User is an user interface of a course buying website, where users can view all available courses, purchase and view their purchased courses.
 
-### Backend for CourseHub - [CourseHub-BE](https://github.com/kunal00000/CourseHub-BE)
-### Admin Interface for CourseHub - [CourseHub-Admin](https://github.com/kunal00000/CourseHub-Admin)
-### User Interface for CourseHub - [CourseHub-User](https://github.com/kunal00000/CourseHub-User)
+__Backend for CourseHub - [CourseHub-BE](https://github.com/kunal00000/CourseHub-BE)__ <br/>
+__Admin Interface for CourseHub - [CourseHub-Admin](https://github.com/kunal00000/CourseHub-Admin)__ <br/>
+__User Interface for CourseHub - [CourseHub-User](https://github.com/kunal00000/CourseHub-User)__
 
 ## Tech Used -
 1. Typescript
