@@ -25,13 +25,14 @@ const Landing = () => {
         <Group position="apart" className="w-[85vw]">
           <div>
             <Text fw={700} lineClamp={2} className="text-5xl text-bold">
-              Build supercharged <br />
-              online courses
+              Learn something
+              <br />
+              new everyday.
             </Text>
             <Text className="my-7">
-              Create custom courses, build beautiful no-code websites, or launch
+              Let's learn new course and Gain more skills
               <br />
-              your own app — all using just CourseHub.
+              all using just CourseHub.
             </Text>
             <Group className="" spacing="sm">
               <Link to="/register">
@@ -40,7 +41,7 @@ const Landing = () => {
                 </Button>
               </Link>
               <Link to="/register">
-                <Button variant="light">Book a demo</Button>
+                <Button variant="light">Explore Courses</Button>
               </Link>
             </Group>
           </div>
@@ -49,10 +50,11 @@ const Landing = () => {
               width={540}
               height={490}
               fit="contain"
-              src={"https://graphy.com/images/herofeature1.png"}
+              src={
+                "https://otus.com/wp-content/uploads/2022/06/Homepage-Header.png"
+              }
               alt="CourseHub"
-              caption="Over 100K+ creators have launched their online
-              teaching businesses using CourseHub."
+              caption="Over 100K+ students have leveled up their learnings and skills using CourseHub."
             />
           </div>
         </Group>
