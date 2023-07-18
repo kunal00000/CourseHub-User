@@ -1,8 +1,9 @@
-import { SimpleGrid, Text, Stack, Flex } from "@mantine/core";
-import CourseCardCompact from "./CourseCardCompact";
+import { Flex, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useEffect, useState } from "react";
-import { Course } from "../../types/course";
+
 import { useCourses, usePurchasedCourses } from "../../hooks/useCourse";
+import { Course } from "../../types/course";
+import CourseCardCompact from "./CourseCardCompact";
 
 const Overview = () => {
   const [courses, setCourses] = useState<Course[]>([]);

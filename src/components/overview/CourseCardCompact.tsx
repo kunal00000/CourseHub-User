@@ -1,6 +1,7 @@
 import { Badge, Group, Notification } from "@mantine/core";
-import { Course } from "../../types/course";
+
 import { usePurchasedCourses } from "../../hooks/useCourse";
+import { Course } from "../../types/course";
 
 const CourseCardCompact = ({ course }: { course: Course }) => {
   const { data: purchasedData } = usePurchasedCourses();
@@ -31,7 +32,7 @@ const CourseCardCompact = ({ course }: { course: Course }) => {
       <Group>
         {purchasedData.purchasedCourses.length > 0 &&
         purchasedData.purchasedCourses.find(
-          (purCourse: { _id: string }) => purCourse._id == course._id
+          (purCourse: { _id: string }) => purCourse._id == course._id,
         ) ? (
           <Badge color="green" radius={"xs"} variant="dot">
             Purchased

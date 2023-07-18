@@ -1,4 +1,4 @@
-import { Button, Group, Text, Image, Center } from "@mantine/core";
+import { Button, Center, Group, Image, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const Landing = () => {

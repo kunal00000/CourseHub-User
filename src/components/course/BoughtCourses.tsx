@@ -1,13 +1,14 @@
-import { AppShell, Navbar, Text, SimpleGrid } from "@mantine/core";
+import { AppShell, Navbar, SimpleGrid, Text } from "@mantine/core";
+import { IconBadges } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import { usePurchasedCourses } from "../../hooks/useCourse";
+import { useUser } from "../../hooks/useUser";
+import { Course } from "../../types/course";
 import { MainLinks, Redirect } from "../utilComponents/Redirect";
 import { User } from "../utilComponents/User";
-import { useUser } from "../../hooks/useUser";
 import CourseCard from "./CourseCard";
-import { Link } from "react-router-dom";
-import { IconBadges } from "@tabler/icons-react";
-import { usePurchasedCourses } from "../../hooks/useCourse";
-import { Course } from "../../types/course";
 
 function BoughtDashboard() {
   const [username, setUsername] = useState("");

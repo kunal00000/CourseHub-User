@@ -1,10 +1,11 @@
-import { Card, Image, Text, Badge, Group, Button } from "@mantine/core";
-import type { Course } from "../../types/course";
+import { Badge, Button, Card, Group, Image, Text } from "@mantine/core";
 import { IconExternalLink } from "@tabler/icons-react";
+
 import {
   useCoursePostMutation,
   usePurchasedCourses,
 } from "../../hooks/useCourse";
+import type { Course } from "../../types/course";
 
 export default function CourseCard({ course }: { course: Course }) {
   const { mutate } = useCoursePostMutation();
@@ -28,7 +29,7 @@ export default function CourseCard({ course }: { course: Course }) {
         <Text weight={500}>{course.title}</Text>
         {purchasedData.purchasedCourses.length > 0 &&
         purchasedData.purchasedCourses.find(
-          (purCourse: { _id: string }) => purCourse._id == course._id
+          (purCourse: { _id: string }) => purCourse._id == course._id,
         ) ? (
           <Badge color="green" radius={"xs"} variant="dot">
             Purchased
@@ -49,7 +50,7 @@ export default function CourseCard({ course }: { course: Course }) {
         {course.updatedAt}
       </Text>
       {!purchasedData.purchasedCourses.find(
-        (purCourse: { _id: string }) => purCourse._id == course._id
+        (purCourse: { _id: string }) => purCourse._id == course._id,
       ) ? (
         <Button
           rightIcon={<IconExternalLink />}
