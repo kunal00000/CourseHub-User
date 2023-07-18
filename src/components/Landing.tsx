@@ -1,18 +1,25 @@
 import { Button, Center, Group, Image, Text } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Landing = () => {
+  const navigate = useNavigate();
+  function onLogin() {
+    if (localStorage.getItem("token")) {
+      navigate("/dashboard");
+    } else {
+      navigate("/login");
+    }
+  }
+
   return (
     <div className="w-[100vw] h-[100vh]">
       <nav>
         <Group position="apart" className="m-10 mx-24">
           <Text className="text-3xl font-bold">CourseHub</Text>
           <Group>
-            <Link to="/login">
-              <Button variant="subtle" color="cyan">
-                Login
-              </Button>
-            </Link>
+            <Button onClick={onLogin} variant="subtle" color="cyan">
+              Login
+            </Button>
             <Link to="/register">
               <Button variant="outline" color="cyan">
                 Start for free
