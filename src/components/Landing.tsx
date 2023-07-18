@@ -47,9 +47,9 @@ const Landing = () => {
                   Start for free
                 </Button>
               </Link>
-              <Link to="/register">
-                <Button variant="light">Explore Courses</Button>
-              </Link>
+              <Button onClick={onLogin} variant="light">
+                Explore Courses
+              </Button>
             </Group>
           </div>
           <div>
