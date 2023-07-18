@@ -17,6 +17,9 @@ function Dashboard() {
       setUsername(data);
     }
   }, [data]);
+  if (username === "") {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>

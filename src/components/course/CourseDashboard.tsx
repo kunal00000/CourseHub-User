@@ -19,6 +19,9 @@ function CourseDashboard() {
       setUsername(data);
     }
   }, [data]);
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>

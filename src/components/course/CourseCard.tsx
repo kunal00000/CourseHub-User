@@ -10,13 +10,13 @@ import type { Course } from "../../types/course";
 export default function CourseCard({ course }: { course: Course }) {
   const { mutate } = useCoursePostMutation();
   const { data: purchasedData, isLoading } = usePurchasedCourses();
-  console.log(purchasedData);
+
   function onBuyCourse() {
     console.log("Buy course");
     mutate(course._id);
   }
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>...</div>;
   }
 
   return (
